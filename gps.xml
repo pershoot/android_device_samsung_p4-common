@@ -2,7 +2,7 @@
 <glgps xmlns="http://www.glpals.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.glpals.com/ glconfig.xsd" >
   <!--HAL Confguration  -->
   <hal 
-	   acPortName="/dev/ttyHS0" lBaudRate="115200" cLogEnableInitState="false" cLogEnabled="false" acLogDirectory="/data/gps/log/" ltoFileName="lto2.dat" 
+	   acPortName="/dev/ttyHS0" lBaudRate="115200" cLogEnableInitState="false" cLogEnabled="true" acLogDirectory="/data/gps/log/" ltoFileName="lto2.dat" 
        enhanced-assisted="false" cp-enhanced-assisted="true" TISEnabled="false" RILEnabled="false" LPmode="false" cp-cold-start="false" cp-guard-time-sec="1"
        arp-supl-enable="true" arp-supl-cap-msb="true" arp-supl-cap-msa="true" arp-supl-cap-ecid="false"
 	   acSuplServer="supl.google.com" SuplPort="7276" arp-supl-use-apn="false"
@@ -13,6 +13,7 @@
        gpioDelayMs="250"
        lcsApiSockName="/dev/socket/gps"
        acNvStoDir="/data/gps/"
+       arp-supl-ssl-method="SSLv3"
        />
 
   <!-- Parameters passed to GlEngine   -->
@@ -29,12 +30,12 @@
             ( i.e. GL_RF_2075_BRCM and GL_RF_PALS7_BRCM ) -->
 
   <gll 
-       LogPriMask="LOG_DEBUG"
-       LogFacMask="LOG_GLLAPI | LOG_DEVIA | LOG_NMEA | LOG_RAWDATA | LOG_DEVMS | LOG_ASIC_IO | LOG_BBTEST | LOG_DEVET | LOG_MESM | LOG_DEVKF | LOG_DEVJG | LOG_DEVMR" 
+       LogPriMask="LOG_INFO"
+       LogFacMask="LOG_GLLAPI | LOG_NMEA | LOG_RAWDATA"
        FrqPlan="FRQ_PLAN_26MHZ_2PPM"   
        RfType="GL_RF_4751_DANUBE_EXT_LNA"
-       WarmStandbyTimeout1Seconds="30"
-       WarmStandbyTimeout2Seconds="50"
+       WarmStandbyTimeout1Seconds="10"
+       WarmStandbyTimeout2Seconds="15"
     >   
   </gll>
 </glgps>
