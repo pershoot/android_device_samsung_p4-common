@@ -166,6 +166,10 @@ on boot
 # adc
     chown system radio /sys/class/sec/sec_adc/adc_test
 
+# MTP permission
+    chmod 0660 /dev/usb_mtp_gadget
+    chown system system /dev/usb_mtp_gadget
+
 # backlight
     chown system system /sys/class/backlight/pwm-backlight/brightness
 
