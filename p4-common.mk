@@ -129,6 +129,10 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS := \
     $(LOCAL_PATH)/overlay
 
+# Set default USB interface
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+	persist.sys.usb.config=mass_storage
+
 # for bugmailer
 ifneq ($(TARGET_BUILD_VARIANT),user)
 	PRODUCT_PACKAGES += send_bug
