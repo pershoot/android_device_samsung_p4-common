@@ -37,7 +37,8 @@
              android:storageDescription="@string/storage_internal"
              android:primary="true"
              android:emulated="true"
-             android:mtpReserve="100" />
+             android:mtpReserve="100" 
+             android:allowMassStorage="true" />
 
     <storage android:mountPoint="/mnt/usbdrive"
              android:storageDescription="@string/storage_usb"
