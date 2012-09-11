@@ -63,6 +63,9 @@ TARGET_RECOVERY_INITRC := device/samsung/p4-common/recovery/init.rc
 # Indicate that the board has an Internal SD Card
 BOARD_HAS_SDCARD_INTERNAL := true
 
+#compass filter
+BOARD_INVENSENSE_APPLY_COMPASS_NOISE_FILTER := true
+
 # device-specific extensions to the updater binary
 #TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_ventana
 TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/p4-common
